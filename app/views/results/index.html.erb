@@ -9,35 +9,53 @@
 
 <div class="container">
     <h1>Vyhodnocení</h1>
- <div class="row">
-<table class="table table-bordered table-responsive" id="results">
-  <thead>
-    <tr>
-        <th>Výsledek</th>
-        <th>Počet hodnotících</th>
-    </tr>
-  </thead>
 
-  <% @votes_count_table.each do |votes_count_table| %>
-    <tr>
-        <td><%= votes_count_table.result %></td>
-        <td><%= votes_count_table.num %></td>
-    </tr>
-  <% end %>
-</table>
+<% if !@votes_count_table.empty?%>
+<div class="row">
+    <div class="col-sm">
+        <table class="table table-responsive" id="results">
+            <thead>
+                <tr>
+                    <th>Výsledek</th>
+                    <th>Počet hodnotících</th>
+                </tr>
+            </thead>
+
+            <% @votes_count_table.each do |votes_count_table| %>
+                <tr>
+                    <td><%= votes_count_table.result %></td>
+                    <td><%= votes_count_table.num %></td>
+                </tr>
+   
+            <% end %>
+        </table>
+        <%= link_to "Smazat vyhodnocení",  remove_all_results_path, :class => 'btn btn-danger', :method => :post %>
+    </div>
+    <div class="col-sm">
+          <%= pie_chart Vote.group(:result).count %>   
+    </div>
+
 </div>
+    <% else %>
 
 <div class="row">
-    <%= pie_chart Vote.group(:result).count %>
+<h2 class="text-muted">Ještě nikdo nehodnotil.</h2>
 </div>
 
-    <div class="row">
-        <div class="col-sm">
-            <%= link_to "Smazat vyhodnocení",  remove_all_results_path, :class => 'btn btn-danger', :method => :post %>
-    </div>
+<% end %>        
 
-    </div>
+
 </div>
+        
+
+
+
+
+
+
+
+    
+
   
 
 </body>

@@ -1,5 +1,5 @@
 {
-  "name": "PresentationsEval",
+  "name": "presentationseval",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
@@ -13,6 +13,30 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "cypress": "^4.0.2",
     "webpack-dev-server": "^3.10.3"
-  }
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "babel.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": { 
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lepi1/PresentationsEval.git"
+  },
+  "keywords": [
+    "votes"
+  ],
+  "author": "tomaslepic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lepi1/PresentationsEval/issues"
+  },
+  "homepage": "https://github.com/lepi1/PresentationsEval#readme"
 }
