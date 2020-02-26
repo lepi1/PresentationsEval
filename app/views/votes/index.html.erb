@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <title>Hodnocení prezentací</title>
+</head>
+<body style="background-color: #ededed">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="nav1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav" >
+            <div class="navbar-nav">
+               <%= link_to 'Hodnotit', votes_path, :class => 'nav-item nav-link' %> 
+               <%= link_to 'Výsledky', results_path, :class => 'nav-item nav-link' %>
+                <a class="nav-item nav-link" href="{link showAboutApp}"><i class="fa fa-info"></i> O aplikaci</a>
+            </div>
+
+        </div>
+    </nav>
+<div class="container">
+    <div class="row">
+      <h1>Prosím, udělejte hodnocení naší prezentace:</h1>
+    </div>
+  </div>
+<div class="container">
+    
+
+
+<%= form_with scope: :votes1, url: votes_path, local: true do |form| %>
+ 
+
+<div class="row">
+      <div class="col-sm">
+        <%= form.submit :value => "Nuda", :class => 'btn btn-danger' %>
+      </div>
+      <div class="col-sm">
+        <%= form.submit :value => "To se mi líbí!", :class => 'btn btn-success' %>
+      </div>
+      <div class="col-sm">
+        <%= form.submit :value => "Málo detailů", :class => 'btn btn-secondary'  %>
+      </div>
+      <div class="col-sm">
+        <%= form.submit :value => "Příliš mnoho detailů.", :class => 'btn btn-warning' %>
+      </div>
+    </div>
+
+
+    <% end %>
+
+
+  </div>
+  
+
+</body>
+</html>
