@@ -40,9 +40,27 @@
   <% end %>
 </table>
 
-
-
 </div>
+
+<div class="container">
+    <h1>Vyhodnocení</h1>
+ 
+<table>
+  <tr>
+    <th>Result</th>
+    
+    <th></th>
+  </tr>
+ 
+  <% @votes_count_table.each do |votes_count_table| %>
+    <tr>
+      <td><%= votes_count_table.result %></td>
+      <td><%= votes_count_table.num %></td>
+    </tr>
+  <% end %>
+</table>
+
+
   
 
 </body>
