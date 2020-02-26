@@ -22,32 +22,14 @@
         </div>
     </nav>
 
-<div class="container">
-    <h1>Vyhodnocení</h1>
- 
-<table>
-  <tr>
-    <th>Result</th>
-    
-    <th></th>
-  </tr>
- 
-  <% @votes.each do |votes| %>
-    <tr>
-      <td><%= votes.result %></td>
-      
-    </tr>
-  <% end %>
-</table>
-
-</div>
 
 <div class="container">
     <h1>Vyhodnocení</h1>
  
 <table>
   <tr>
-    <th>Result</th>
+    <th>Výsledek</th>
+    <th>Počet hodnotících</th>
     
     <th></th>
   </tr>
@@ -61,6 +43,16 @@
 </table>
 
 
+ 
+<div class="row">
+      <div class="col-sm">
+        <%= link_to "Reset",  remove_all_results_path, :class => 'btn btn-danger', :method => :post %>
+      </div>
+
+    
+
+  </div>
+</div>
   
 
 </body>

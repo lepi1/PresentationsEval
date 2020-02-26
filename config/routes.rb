@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   root 'votes#index'
 
  resources :votes
- resources :results
+ resources :results do 
+    collection do
+      post 'remove_all'
+    end
+  end
 end
