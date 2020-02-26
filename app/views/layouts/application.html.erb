@@ -7,11 +7,29 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
     
   </head>
 
-  <body>
+  <body style="background-color: #ededed">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="nav1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav" >
+            <div class="navbar-nav">
+               <%= link_to 'Hodnotit', votes_path, :class => 'nav-item nav-link' %> 
+               <%= link_to 'Výsledky', results_path, :class => 'nav-item nav-link' %>
+                
+                <a class="nav-item nav-link" href="{link showAboutApp}"> O aplikaci</a>
+            </div>
+
+        </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
