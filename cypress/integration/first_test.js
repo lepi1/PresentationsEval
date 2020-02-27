@@ -13,6 +13,7 @@ describe('Vote for boring 2 times', function() {
         cy.contains('Nuda').click()
         
         
+        
     })
 })
 
@@ -23,12 +24,13 @@ describe('Check 2 votes for boring option', function(){
         
         /*cy.contains('Výsledek').parent('tr').within(() => {
             cy.get('td').eq(1).contains('Nuda')
-            cy.get('td').eq(2).contains('2')
+            
                 
 
 
         })*/
+        cy.get('tr').eq(1).should('contain', '2')
 
-        cy.get('table').contains('td', 'Nuda').prev().prev().should('contain', '2')
+        
     });
 })
