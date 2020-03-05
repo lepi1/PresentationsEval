@@ -29,7 +29,7 @@
    
             <% end %>
         </table>
-        <%= link_to "Smazat vyhodnocení",  remove_all_results_path, :class => 'btn btn-danger', :method => :post %>
+        <%= link_to "Smazat vyhodnocení",  remove_all_results_path, :class => 'btn btn-danger', :method => :post, :data => { :cy => 'reset'} %>
     </div>
     <div class="col-sm">
           <%= pie_chart Vote.group(:result).count %>   

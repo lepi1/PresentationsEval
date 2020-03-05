@@ -15,16 +15,16 @@
     <%= form_with scope: :votes, url: votes_path, local: true do |form| %>
     <div class="row">
         <div class="col-sm">
-            <%= form.submit :value => "Nuda", :class => 'btn btn-danger' %>
+            <%= form.submit :value => "Nuda", :class => 'btn btn-danger', :data => { :cy => 'boring'} %>
         </div>
         <div class="col-sm">
-            <%= form.submit :value => "To se mi líbí!", :class => 'btn btn-success' %>
+            <%= form.submit :value => "To se mi líbí!", :class => 'btn btn-success', :data => { :cy => 'like'} %>
         </div>
         <div class="col-sm">
-            <%= form.submit :value => "Málo detailů", :class => 'btn btn-secondary'  %>
+            <%= form.submit :value => "Málo detailů", :class => 'btn btn-secondary', :data => { :cy => 'lackofdetails'}  %>
         </div>
         <div class="col-sm">
-            <%= form.submit :value => "Příliš mnoho detailů.", :class => 'btn btn-warning' %>
+            <%= form.submit :value => "Příliš mnoho detailů.", :class => 'btn btn-warning', :data => { :cy => 'toomuchdetails'} %>
         </div>
     </div>
     <% end %>
