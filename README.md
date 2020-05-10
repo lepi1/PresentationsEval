@@ -1,3 +1,3 @@
-First RoR application
+# My first RoR application
 
-Simple voting app
+## Simple voting app
